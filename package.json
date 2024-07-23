@@ -1,0 +1,46 @@
+{
+  "name": "swisstronik-erc20",
+  "version": "1.0.0",
+  "description": "Zix is an ERC20 Solidity contract with enhanced security features. It includes mechanisms to prevent reentrancy attacks, signature replay attacks, and more. This contract is designed to be highly secure and robust.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "report-gas": "REPORT_GAS=true npx hardhat test",
+    "coverage": "npx hardhat coverage",
+    "deploy": "npx hardhat run scripts/deploy.ts --network swisstronik",
+    "mint": "npx hardhat run scripts/mint.ts --network swisstronik",
+    "transfer": "npx hardhat run scripts/transfer.ts --network swisstronik",
+    "check-supply": "npx hardhat run scripts/check-supply.ts --network swisstronik",
+    "balance-of": "npx hardhat run scripts/balance-of.ts --network swisstronik",
+    "transfer-with-signature": "npx hardhat run scripts/transferWithSignature.ts --network swisstronik",
+    "compile": "npx hardhat compile"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Zixine",
+    "url": "https://github.com/naufalprtm/swisstronik-smartcontract-erc20"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "@swisstronik/utils": "^1.1.0",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.6",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/hardhat-upgrades": "^3.2.0",
+    "ethers": "^6.13.1",
+    "hardhat": "^2.22.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naufalprtm/swisstronik-smartcontract-erc20"
+  }
+}
